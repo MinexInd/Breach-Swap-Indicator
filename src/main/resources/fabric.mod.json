@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "breach-swap-indicator",
+	"version": "${version}",
+	"name": "Breach Swap Indicator",
+	"description": "A lightweight client-side Fabric mod that confirms successful Breach mace swaps after a hit with clean hotbar animations and optional text feedback.",
+	"authors": [
+		"MineX"
+	],
+	"license": "MIT",
+	"icon": "assets/breach-swap-indicator/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"net.minex.client.BreachSwapIndicatorClient"
+		]
+	},
+	"mixins": [
+		"breach-swap-indicator.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

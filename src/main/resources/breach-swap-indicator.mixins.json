@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "net.minex.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"MixinInGameHud"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
