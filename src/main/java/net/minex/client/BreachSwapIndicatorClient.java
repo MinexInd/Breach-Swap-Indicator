@@ -49,7 +49,7 @@ public class BreachSwapIndicatorClient implements ClientModInitializer {
         });
         
         net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) -> {
-            dispatcher.register(net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal("breachhud")
+            dispatcher.register(net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.literal("breachswaphud")
                 .executes(context -> {
                     BreachLogic.enabled = !BreachLogic.enabled;
                     context.getSource().sendFeedback(Text.literal("Breach HUD " + (BreachLogic.enabled ? "Enabled" : "Disabled")).formatted(BreachLogic.enabled ? Formatting.GREEN : Formatting.RED));

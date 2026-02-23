@@ -48,8 +48,6 @@ public class BreachLogic {
     private static int successSlot = -1;
     private static int oldSlot = -1;
 
-    private static boolean debugPrinted = false;
-
     private static long lastSlotChangeTime = 0;
     private static int lastSlotBeforeChange = -1;
 
@@ -86,11 +84,6 @@ public class BreachLogic {
         ClientPlayerEntity player = client.player;
         if (player == null) return;
         
-        if (!debugPrinted) {
-             player.sendMessage(Text.literal("Breach Swap Mod Loaded").formatted(Formatting.GREEN), false);
-             debugPrinted = true;
-        }
-
         ItemStack currentMainHand = player.getStackInHand(Hand.MAIN_HAND);
         int currentSlotIndex = player.getInventory().selectedSlot;
 
